@@ -20,6 +20,12 @@ body {
 		flex-grow: 1;
 		flex-basis: 0;
 		overflow: scroll;
+
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
 	}
 
 	& > header, & > footer {
@@ -35,13 +41,43 @@ body {
 	}
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, a, button {
 	margin: 0;
 	padding: 0;
+}
+a, button {
+	outline: none;
+	border: 1px solid black;
+	padding: .2em .4em;
+	text-decoration: none;
+
+	color: black;
+	background-color: white;
+
+	&:hover { background-color: #ddd; }
+	&:active { background-color: #aaa; }
+}
+
+section.showcase {
+	padding: 2px 10px;
+	padding-right: 0;
+	border-left: 3px solid black;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+
+	& > header { display: flex; }
 }
 
 .epic-text {
 	font-style: oblique;
 	font-weight: bold;
 	text-decoration: underline;
+}
+
+#s-counter {
+	& > header > :last-child { margin-left: 5px; }
+	& > content > :not(:first-child) { border-left: none; }
 }
