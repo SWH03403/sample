@@ -1,0 +1,10 @@
+body > footer {
+	color: #aaa;
+	font-size: 12px;
+}
+
+.epic-text {
+	font-style: oblique;
+	font-weight: bold;
+	text-decoration: underline;
+}
