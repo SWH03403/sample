@@ -36,7 +36,13 @@ const showcases = [
 				} else {
 					timer.now = Date.now();
 					timer.handle = setInterval(() => {
-						const duration = { milliseconds: timer.elapsed + timer.diff() };
+						const millis = timer.elapsed + timer.diff();
+						const duration = {
+							hours: Math.floor(millis / 3.6e6),
+							minutes: Math.floor(millis / 6e4) % 60,
+							seconds: Math.floor(millis / 1000) % 60,
+							milliseconds: millis % 1000,
+						};
 						value.innerText = new Intl
 							.DurationFormat("en", { style: "digital", fractionalDigits: 2 })
 							.format(duration);
