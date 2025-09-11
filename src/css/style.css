@@ -98,3 +98,5 @@ section.showcase {
 
 	& > content > button:not(:first-child) { border-left: none; }
 }
+
+#sc-timer .value { min-width: 85px; }
