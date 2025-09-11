@@ -75,8 +75,14 @@ a, button {
 	&:active { background-color: var(--background-active); }
 }
 
+.epic-text {
+	font-style: oblique;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 section.showcase {
-	padding: 2px var(--spacing); /* for the hover bar */
+	padding: 2px 5px;
 	padding-right: 0;
 	border-left: 3px solid var(--foreground);
 
@@ -85,16 +91,10 @@ section.showcase {
 	align-items: flex-start;
 	gap: 2px;
 
-	& > header { display: flex; }
-}
+	& > header {
+		display: flex;
+		& > :last-child { margin-left: 5px; }
+	}
 
-.epic-text {
-	font-style: oblique;
-	font-weight: bold;
-	text-decoration: underline;
-}
-
-#s-counter {
-	& > header > :last-child { margin-left: 5px; }
-	& > content > :not(:first-child) { border-left: none; }
+	& > content > button:not(:first-child) { border-left: none; }
 }
