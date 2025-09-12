@@ -81,7 +81,7 @@ a, button {
 	text-decoration: underline;
 }
 
-article.showcase {
+.showcase {
 	padding: 2px 5px;
 	padding-right: 0;
 	border-left: 3px solid var(--foreground);
