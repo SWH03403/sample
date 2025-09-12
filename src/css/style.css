@@ -58,7 +58,7 @@ body {
 	}
 }
 
-h1, h2, h3, h4, h5, p, a, button {
+h1, h2, h3, h4, h5, h6, p, a, button {
 	margin: 0;
 	padding: 0;
 }
@@ -81,7 +81,7 @@ a, button {
 	text-decoration: underline;
 }
 
-section.showcase {
+article.showcase {
 	padding: 2px 5px;
 	padding-right: 0;
 	border-left: 3px solid var(--foreground);
@@ -96,7 +96,11 @@ section.showcase {
 		& > :last-child { margin-left: 5px; }
 	}
 
-	& > content > button:not(:first-child) { border-left: none; }
+	& > .controls {
+		display: flex;
+
+		& > button:not(:first-child) { border-left: none; }
+	}
 }
 
 #sc-timer .value { min-width: 85px; }
