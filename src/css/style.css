@@ -91,9 +91,13 @@ article.showcase {
 	align-items: flex-start;
 	gap: 2px;
 
+	& > header > .name,
+	& > .controls > .reset { font-weight: bold; }
+
+
 	& > header {
 		display: flex;
-		& > :last-child { margin-left: 5px; }
+		& > .value { margin-left: 5px; }
 	}
 
 	& > .controls {
